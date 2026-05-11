@@ -1,0 +1,31 @@
+{
+  "name": "ai-led-marketing-os",
+  "version": "1.0.0",
+  "description": "Mikey Cabiles' AI-Led MarketingOS — a multi-agent personal operating system built on the Anthropic Agent SDK",
+  "main": "bridge/index.js",
+  "scripts": {
+    "start": "node bridge/index.js",
+    "dashboard": "node dashboard/server.js",
+    "dev": "nodemon bridge/index.js",
+    "init-db": "node memory/db.js --init",
+    "pm2-start": "pm2 start ecosystem.config.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "latest",
+    "@google/generative-ai": "^0.1.0",
+    "axios": "^1.6.0",
+    "better-sqlite3": "^9.0.0",
+    "chokidar": "^3.5.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.18.0",
+    "node-cron": "^3.0.0",
+    "node-telegram-bot-api": "^0.65.0",
+    "ws": "^8.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
